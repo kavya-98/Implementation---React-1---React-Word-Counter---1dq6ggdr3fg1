@@ -10,7 +10,7 @@ const App = () => {
     <div id="main">
       <textarea
         style={{ fontSize: { size } }}
-        maxlength={max}
+        maxLength={max}
         onChange={(e) => settext(e.target.value)}
       ></textarea>
       <div className="word-counter">{text.split(" ").length}</div>
