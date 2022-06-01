@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-import '../styles/App.css';
+import React, { useState } from "react";
+//import '../styles/App.css';
 const App = () => {
-  const [text, settext] = useState('');
+  const [text, settext] = useState("");
 
   return (
     <div id="main">
-      <textarea onChange={(e) => settext(e.target.value)}></textarea>
-      <div className="word-counter">{text.split(' ').length - 1}</div>
+      <textarea
+        maxlength="50"
+        onChange={(e) => settext(e.target.value)}
+      ></textarea>
+      <div className="word-counter">{text.split(" ").length}</div>
       <div id="char-counter">{text.length}</div>
+      <input type="number" max="50" />
     </div>
   );
 };
